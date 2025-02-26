@@ -56,6 +56,10 @@ done
 # to the network interfaces in the guests spawned by the CI.
 ln -s /etc/systemd/system/fcnet.service /etc/systemd/system/sysinit.target.wants/fcnet.service
 
+# Setup http servers
+ln -s /etc/systemd/system/health.service /etc/systemd/system/multi-user.target.wants/health.service
+ln -s /etc/systemd/system/user-func.service /etc/systemd/system/multi-user.target.wants/user-func.service
+
 # Disable resolved and ntpd
 #
 rm -f /etc/systemd/system/multi-user.target.wants/systemd-resolved.service

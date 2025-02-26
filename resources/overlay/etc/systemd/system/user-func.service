@@ -1,0 +1,7 @@
+[Service]
+Type=simple
+ExecStart=busybox httpd -f -p 80
+[Unit]
+Requires=fcnet.service
+[Install]
+WantedBy=multi-user.target
