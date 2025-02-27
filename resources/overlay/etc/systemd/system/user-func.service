@@ -1,6 +1,6 @@
 [Service]
 Type=simple
-ExecStart=busybox httpd -f -p 80
+ExecStart=trace-func-go
 [Unit]
 Requires=fcnet.service
 [Install]
